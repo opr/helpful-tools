@@ -1,0 +1,115 @@
+{
+  "name": "Bloc",
+  "version": "1.0.0",
+  "description": "A system for rapid prototyping and component-based front-end development",
+  "main": "index.js",
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "extension": [
+      ".jsx"
+    ],
+    "exclude": [
+      "assets/vendor/**",
+      "assets/js/dist/**",
+      "assets/js/test/**",
+      "./node_modules"
+    ],
+    "include": [
+      "assets/js/src/react/**",
+      "assets/js/src/modules/**"
+    ],
+    "reporter": [
+      "text",
+      "cobertura",
+      "lcov"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "scripts": {
+    "run": "webpack",
+    "coverage": "cross-env NODE_ENV=test BABEL_ENV=test nyc --all mocha --recursive ./assets/js/test",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=test mocha --ui bdd --recursive --require @babel/register --require ./assets/js/test/test_helper.js ./assets/js/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opr/bloc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opr/bloc/issues"
+  },
+  "homepage": "https://github.com/opr/bloc",
+  "dependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "@babel/register": "^7.0.0-rc.1",
+    "@babel/runtime": "^7.3.1",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-istanbul": "^5.0.1",
+    "babel-preset-latest": "7.0.0-alpha.7",
+    "browser-sync": "^2.23.6",
+    "chai": "^4.1.2",
+    "chai-immutable": "^1.6.0",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.4.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-react": "^7.9.1",
+    "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssimport": "^6.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-env": "^0.4.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sort": "^2.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "http-server": "^0.11.1",
+    "immutable": "^3.8.2",
+    "jsdom": "^12.0.0",
+    "katex": "^0.10.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.0.1",
+    "prop-types": "^15.6.2",
+    "pug": "^2.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-katex": "^2.0.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^1.0.1",
+    "sass-lint": "^1.12.1",
+    "superagent": "^4.1.0",
+    "watch": "^1.0.2",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-stream": "^4.0.0",
+    "write-file-webpack-plugin": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
+    "react-hot-loader": "^4.0.0-beta.18",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "env": {
+    "production": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "@babel/plugin-transform-runtime"
+      ]
+    },
+    "test": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "istanbul",
+        "@babel/plugin-transform-runtime"
+      ]
+    },
+    "development": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "react-hot-loader/babel",
+        "transform-object-rest-spread",
+        "@babel/plugin-transform-runtime"
+      ]
+    }
+  }
+}
