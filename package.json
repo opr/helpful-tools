@@ -57,6 +57,7 @@
     "@babel/runtime": "^7.3.1",
     "babel-loader": "^8.0.0-beta.4",
     "babel-plugin-istanbul": "^5.0.1",
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
     "babel-preset-latest": "7.0.0-alpha.7",
     "browser-sync": "^2.23.6",
     "chai": "^4.1.2",
@@ -93,6 +94,7 @@
     "pug": "^2.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0-beta.18",
     "react-katex": "^2.0.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
@@ -100,17 +102,13 @@
     "redux-immutable": "^4.0.0",
     "redux-saga": "^1.0.1",
     "sass-lint": "^1.12.1",
-    "superagent": "^4.1.0",
+    "superagent": "^3.8.3",
     "watch": "^1.0.2",
+    "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
+    "webpack-dev-server": "^2.11.1",
     "webpack-hot-middleware": "^2.21.0",
     "webpack-stream": "^4.0.0",
-    "write-file-webpack-plugin": "^4.2.0",
-    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3"
-  },
-  "devDependencies": {
-    "react-hot-loader": "^4.0.0-beta.18",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "write-file-webpack-plugin": "^4.2.0"
   }
 }

@@ -1,6 +1,5 @@
 const webpack = require('webpack'),
-  path = require('path'),
-  WriteFilePlugin = require('write-file-webpack-plugin');
+  path = require('path');
 
 module.exports = {
   entry: {
@@ -33,14 +32,14 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'eslint-loader'
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: [/(node_modules)/, /node_modules\/superagent/],
         use: 'babel-loader'
       }
     ]
