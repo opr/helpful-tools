@@ -30,6 +30,7 @@
   },
   "scripts": {
     "run": "webpack",
+    "start": "babel-node app.js",
     "coverage": "cross-env NODE_ENV=test BABEL_ENV=test nyc --all mocha --recursive ./assets/js/test",
     "test": "cross-env NODE_ENV=test BABEL_ENV=test mocha --ui bdd --recursive --require @babel/register --require ./assets/js/test/test_helper.js ./assets/js/test"
   },

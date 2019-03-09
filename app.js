@@ -9,7 +9,7 @@ import {calculateAgony} from './backend/agony/api';
 import GameOfLife from './assets/js/src/react/GameOfLife/GameOfLife';
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 app.get('/', (req, res) => res.render('index'));
 app.get('/maths/frequency-table-calculator', (req, res) => res.render('maths/frequency-table-calculator', {title: 'Frequency table calculator', component: renderToString(<Provider store={store}><FrequencyTableCalculator /></Provider>)}));
