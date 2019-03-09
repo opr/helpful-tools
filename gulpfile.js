@@ -146,6 +146,7 @@ gulp.task('sass:compile', ['sass:lint'], () => {
 
 gulp.task('default', ['sass:lint', 'sass:compile', 'browser-sync', 'webpack:build', 'vendor', 'webserver', 'watch']);
 gulp.task('build', ['sass:lint', 'sass:compile', 'webpack:build:production', 'vendor']);
+gulp.task('heroku:production', ['sass:lint', 'sass:compile', 'webpack:build:production', 'vendor']);
 
 function errorAlert(error) {
   console.log(error.toString());//Prints Error to Console
