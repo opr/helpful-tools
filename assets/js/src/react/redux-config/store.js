@@ -6,9 +6,10 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 
 import {modalSaga} from '../sagas/modals';
 import {agonySaga} from '../sagas/agony';
+import {gameOfLifeSaga} from '../sagas/gameOfLife';
 
 const makeStore = () => {
-  const sagas = [agonySaga, modalSaga];
+  const sagas = [agonySaga, gameOfLifeSaga, modalSaga];
   const INITIAL_STATE = Map({});
   const sagaMiddleware = createSagaMiddleware();
   const middleware = [sagaMiddleware];

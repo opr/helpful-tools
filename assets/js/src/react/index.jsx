@@ -6,6 +6,7 @@ import FrequencyTableCalculator from './FrequencyTableCalculator/FrequencyTableC
 import store from './redux-config/store';
 import {Provider} from 'react-redux';
 import AgonyCalculator from './AgonyCalculator/AgonyCalculator';
+import GameOfLife from './GameOfLife/GameOfLife';
 
 const getRenderFunc = app => () => {
   render(app.component, app.element, app.name, app.hydrate);
@@ -23,7 +24,8 @@ const render = (Component, element, name, hydrate) => {
 
 const elements = {
   frequencyTableCalculator: document.getElementById('frequency-table-calculator__react-anchor'),
-  agonyCalculator: document.getElementById('agony-calculator__react-root')
+  agonyCalculator: document.getElementById('agony-calculator__react-root'),
+  gameOfLifeAnchor: document.getElementById('game-of-life__react-anchor')
 };
 const apps = [];
 
@@ -43,6 +45,17 @@ if (elements.agonyCalculator) {
     component: <Provider store={store}><AgonyCalculator/></Provider>,
     file: './AgonyCalculator/AgonyCalculator',
     name: 'AgonyCalculator',
+    hydrate: true
+  });
+}
+
+
+if (elements.gameOfLifeAnchor) {
+  apps.push({
+    element: elements.gameOfLifeAnchor,
+    component: <Provider store={store}><GameOfLife/></Provider>,
+    file: './GameOfLife/GameOfLife',
+    name: 'GameOfLife',
     hydrate: true
   });
 }

@@ -13,10 +13,10 @@ class FrequencyTableCalculatorResults extends React.Component {
 
   render() {
     const sigmafi = this.props.rows.reduce((acca, current) => acca+current.get('frequency', 0), 0) || 0;
-    const sigmaxifi = this.props.rows.reduce((acca, current) => acca+((current.get('low', 0) + current.get('high', 1))/2) * current.get('frequency', 0), 0) || 0 ;
+    const sigmaxifi = this.props.rows.reduce((acca, current) => acca+((current.get('low', 0) + current.get('high', 1)+1)/2) * current.get('frequency', 0), 0) || 0 ;
     const barx =  sigmaxifi/sigmafi || 0;
     const sigmaxLessBarxSquared = this.props.rows.reduce((acca, current)=> {
-      const x = (current.get('low', 0) + current.get('high', 1))/2;
+      const x = (current.get('low', 0) + current.get('high', 1)+1)/2;
       return acca + (Math.pow(x-barx, 2))*current.get('frequency', 0);
     }, 0);
 

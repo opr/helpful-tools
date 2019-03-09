@@ -30,7 +30,7 @@ class FrequencyTableCalculator extends React.Component {
         frequency:52
       }),
       Map({
-        low: 50000,
+        low: 60000,
         high: 79999,
         frequency:19
       }),
@@ -115,7 +115,7 @@ class FrequencyTableCalculator extends React.Component {
               const sigmaxifi = this.state.rows.reduce((acca, current) => acca+((current.get('low', 0) + current.get('high', 1))/2) * current.get('frequency', 0), 0) || 0 ;
               const barx =  sigmaxifi/sigmafi || 0;
 
-              const midpoint = (row.get('low', 0) + row.get('high', 0))/2;
+              const midpoint = (parseInt(row.get('low', 0)) + parseInt(row.get('high', 0))+1)/2;
               return <tr key={index}>
               <td>low: <input step={0.01} type={'number'} onChange={e => this.updateRow(index, 'low', e.target.value)}
                          value={row.get('low')} readOnly={index > 0}/> - high: <input step={0.01}  type={'number'}

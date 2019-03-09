@@ -2676,6 +2676,20 @@ h6 {
       width: auto;
       padding: 0; } }
 
+.game-of-life-cell {
+  height: 7px;
+  width: 7px;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+  border-left: 0;
+  float: left;
+  cursor: pointer; }
+  .game-of-life-cell:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.1); }
+  .game-of-life-cell.\--active {
+    background: #560000; }
+
 .hidden-label {
   position: absolute;
   left: -1000px; }

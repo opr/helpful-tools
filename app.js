@@ -6,13 +6,15 @@ import store from './assets/js/src/react/redux-config/store';
 import {Provider} from 'react-redux';
 import AgonyCalculator from './assets/js/src/react/AgonyCalculator/AgonyCalculator';
 import {calculateAgony} from './backend/agony/api';
+import GameOfLife from './assets/js/src/react/GameOfLife/GameOfLife';
 
 const app = express();
 const port = 3002;
 
 app.get('/', (req, res) => res.render('index'));
 app.get('/maths/frequency-table-calculator', (req, res) => res.render('maths/frequency-table-calculator', {title: 'Frequency table calculator', component: renderToString(<Provider store={store}><FrequencyTableCalculator /></Provider>)}));
-app.get('/gw2/agony-calculator', (req, res) => res.render('gw2/agony-calculator', {title: 'Agony calculator', component: renderToString(<Provider store={store}><AgonyCalculator/></Provider>)}))
+app.get('/maths/game-of-life', (req, res) => res.render('maths/game-of-life', {title: 'Conway\'s Game of Life', component: renderToString(<Provider store={store}><GameOfLife /></Provider>)}));
+app.get('/gw2/agony-calculator', (req, res) => res.render('gw2/agony-calculator', {title: 'Agony calculator', component: renderToString(<Provider store={store}><AgonyCalculator/></Provider>)}));
 
 //backend stuff
 app.get('/api/agonyPrices', async (req, res) => {
