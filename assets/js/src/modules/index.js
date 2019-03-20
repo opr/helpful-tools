@@ -1,10 +1,11 @@
 import addNumber from './addNumber';
+import {superQueens} from './superQueens';
 
 const pageFunctions = {
     common: {
         init() {
             console.log('init');
-            addNumber(1,2);
+            superQueens();
         },
 
         finalize() {
