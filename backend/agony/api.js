@@ -3,7 +3,6 @@ import {fromJS} from 'immutable';
 import {agonyIds, thermocatalyticPrice} from '../../assets/js/src/react/AgonyCalculator/data';
 
 export const calculateAgony = async (source, result, count) => {
-  //const apiKey = 'F1C1F53E-FD03-E248-AF53-0A79A6CC75969671D389-D3F3-41F6-BE4D-5C7918CA67E9';
   let profit = 0;
   let totalOutlay = 0;
   let sourceRequired = 0;
